@@ -1,0 +1,67 @@
+{
+  "extensionName": "TurboWarp-HTTP-Server-Jotai",
+  "blocks": [
+    {
+      "opcode": "defineAtom",
+      "blockType": "COMMAND",
+      "text": "define Jotai atom [ATOM] default JSON [VALUE]",
+      "description": "Adds or replaces an atom definition in the current bridge plan.",
+      "arguments": {
+        "ATOM": {"type": "STRING", "defaultValue": "counter"},
+        "VALUE": {"type": "STRING", "defaultValue": "0"}
+      }
+    },
+    {
+      "opcode": "setAtomValue",
+      "blockType": "COMMAND",
+      "text": "set Jotai atom [ATOM] JSON [VALUE]",
+      "description": "Updates the current atom snapshot and appends a set-atom action envelope.",
+      "arguments": {
+        "ATOM": {"type": "STRING", "defaultValue": "counter"},
+        "VALUE": {"type": "STRING", "defaultValue": "1"}
+      }
+    },
+    {
+      "opcode": "atomValueJson",
+      "blockType": "REPORTER",
+      "text": "Jotai atom [ATOM] value JSON",
+      "description": "Returns the current JSON value for an atom in the bridge plan.",
+      "arguments": {
+        "ATOM": {"type": "STRING", "defaultValue": "counter"}
+      }
+    },
+    {
+      "opcode": "createSetActionJson",
+      "blockType": "REPORTER",
+      "text": "Jotai set action atom [ATOM] JSON [VALUE]",
+      "description": "Returns a standalone set-atom action envelope as JSON.",
+      "arguments": {
+        "ATOM": {"type": "STRING", "defaultValue": "counter"},
+        "VALUE": {"type": "STRING", "defaultValue": "1"}
+      }
+    },
+    {
+      "opcode": "planJson",
+      "blockType": "REPORTER",
+      "text": "Jotai bridge plan JSON",
+      "description": "Returns the current atom registry, action log, and state snapshot as bridge JSON.",
+      "arguments": {}
+    },
+    {
+      "opcode": "clearPlan",
+      "blockType": "COMMAND",
+      "text": "clear Jotai bridge plan",
+      "description": "Clears the in-memory bridge plan held by this TurboWarp extension instance.",
+      "arguments": {}
+    },
+    {
+      "opcode": "normalizeValueJson",
+      "blockType": "REPORTER",
+      "text": "normalized JSON [VALUE]",
+      "description": "Parses a JSON value and returns its canonical JSON representation.",
+      "arguments": {
+        "VALUE": {"type": "STRING", "defaultValue": "{\"label\":\"demo\"}"}
+      }
+    }
+  ]
+}

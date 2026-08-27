@@ -1,0 +1,79 @@
+{
+  "formatVersion": 1,
+  "id": "kubohiroyajotaibridge",
+  "blocks": [
+    {
+      "opcode": "atomValueJson",
+      "blockType": "REPORTER",
+      "arguments": [
+        {
+          "id": "ATOM",
+          "type": "STRING"
+        }
+      ]
+    },
+    {
+      "opcode": "clearPlan",
+      "blockType": "COMMAND",
+      "arguments": []
+    },
+    {
+      "opcode": "createSetActionJson",
+      "blockType": "REPORTER",
+      "arguments": [
+        {
+          "id": "ATOM",
+          "type": "STRING"
+        },
+        {
+          "id": "VALUE",
+          "type": "STRING"
+        }
+      ]
+    },
+    {
+      "opcode": "defineAtom",
+      "blockType": "COMMAND",
+      "arguments": [
+        {
+          "id": "ATOM",
+          "type": "STRING"
+        },
+        {
+          "id": "VALUE",
+          "type": "STRING"
+        }
+      ]
+    },
+    {
+      "opcode": "normalizeValueJson",
+      "blockType": "REPORTER",
+      "arguments": [
+        {
+          "id": "VALUE",
+          "type": "STRING"
+        }
+      ]
+    },
+    {
+      "opcode": "planJson",
+      "blockType": "REPORTER",
+      "arguments": []
+    },
+    {
+      "opcode": "setAtomValue",
+      "blockType": "COMMAND",
+      "arguments": [
+        {
+          "id": "ATOM",
+          "type": "STRING"
+        },
+        {
+          "id": "VALUE",
+          "type": "STRING"
+        }
+      ]
+    }
+  ],
+  "menus": []
+}
