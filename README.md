@@ -14,7 +14,7 @@ TurboWarp-HTTP-Server-Jotai is an experimental TurboWarp extension package for d
 The package is version-pinned when used from another toolchain:
 
 ```bash
-pnpm add --save-exact @kubohiroya/turbowarp-http-server-jotai@0.1.0
+pnpm add --save-exact @kubohiroya/turbowarp-http-server-jotai@0.2.0
 ```
 
 ## Requirements and safety

@@ -1,6 +1,6 @@
 {
   "name": "@kubohiroya/turbowarp-http-server-jotai",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "TurboWarp blocks for describing Jotai atom registry, actions, and state bridge JSON.",
   "author": "Hiroya Kubo <hiroya@cuc.ac.jp>",
   "license": "MPL-2.0",
