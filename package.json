@@ -1,16 +1,16 @@
 {
-  "name": "@kubohiroya/turbowarp-http-server-jotai",
-  "version": "0.1.0",
-  "description": "TurboWarp blocks for describing Jotai atom registry, actions, and state bridge JSON.",
+  "name": "@kubohiroya/turbowarp-jotai-adapter",
+  "version": "0.2.0",
+  "description": "TurboWarp adapter blocks for describing Jotai atom registry, actions, and state bridge JSON.",
   "author": "Hiroya Kubo <hiroya@cuc.ac.jp>",
   "license": "MPL-2.0",
-  "homepage": "https://github.com/kubohiroya/turbowarp-http-server-jotai#readme",
+  "homepage": "https://github.com/kubohiroya/turbowarp-jotai-adapter#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kubohiroya/turbowarp-http-server-jotai.git"
+    "url": "git+https://github.com/kubohiroya/turbowarp-jotai-adapter.git"
   },
   "bugs": {
-    "url": "https://github.com/kubohiroya/turbowarp-http-server-jotai/issues"
+    "url": "https://github.com/kubohiroya/turbowarp-jotai-adapter/issues"
   },
   "keywords": [
     "turbowarp",
@@ -20,7 +20,7 @@
     "state",
     "atom",
     "bridge",
-    "http-server",
+    "adapter",
     "vite",
     "typescript"
   ],

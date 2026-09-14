@@ -26,8 +26,8 @@ describe('JotaiBridgeExtension', () => {
       blocks: Array<{opcode: string; blockType: string}>;
     };
 
-    expect(info.name).toBe('TurboWarp-HTTP-Server-Jotai');
-    expect(info.docsURI).toBe('https://kubohiroya.github.io/turbowarp-http-server-jotai/');
+    expect(info.name).toBe('TurboWarp Jotai Adapter');
+    expect(info.docsURI).toBe('https://kubohiroya.github.io/turbowarp-jotai-adapter/');
     expect(info.blocks.map((block) => block.opcode)).toContain('planJson');
   });
 

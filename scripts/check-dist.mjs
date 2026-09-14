@@ -18,14 +18,16 @@ try {
   process.exit(0);
 }
 
-const {stdout} = await execFileAsync(
-  'git',
-  ['status', '--short', '--untracked-files=all', '--', 'dist'],
-  {cwd: repositoryRoot}
-);
+const [{stdout: modified}, {stdout: untracked}] = await Promise.all([
+  execFileAsync('git', ['diff', '--name-only', '--', 'dist'], {cwd: repositoryRoot}),
+  execFileAsync('git', ['ls-files', '--others', '--exclude-standard', '--', 'dist'], {
+    cwd: repositoryRoot
+  })
+]);
 
-if (stdout.length > 0) {
+const staleFiles = `${modified}${untracked}`;
+if (staleFiles.length > 0) {
   process.stderr.write('Generated dist files are not up to date:\n');
-  process.stderr.write(stdout);
+  process.stderr.write(staleFiles);
   process.exitCode = 1;
 }
