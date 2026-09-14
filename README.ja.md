@@ -1,4 +1,4 @@
-# TurboWarp-HTTP-Server-Jotai
+# TurboWarp Jotai Adapter
 
 [English](README.md)
 
@@ -54,10 +54,10 @@ Reactコンポーネントのmount、MUIなどのリッチGUI部品、Vite dev�
 想定する分担は次の通りです。
 
 ```text
-TurboWarp-HTTP-Server-Jotai
+TurboWarp Jotai Adapter
   ブロックでatom registry/action/snapshotを作る
 
-TurboWarp-HTTP-Server-React
+TurboWarp React Islands
   ReactコンポーネントをHTMLへ埋め込み、bridge JSONをpropsやinitial stateとして渡す
 
 TypeScript hooks

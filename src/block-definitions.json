@@ -1,5 +1,5 @@
 {
-  "extensionName": "TurboWarp-HTTP-Server-Jotai",
+  "extensionName": "TurboWarp Jotai Adapter",
   "blocks": [
     {
       "opcode": "defineAtom",

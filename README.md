@@ -1,8 +1,8 @@
-# TurboWarp-HTTP-Server-Jotai
+# TurboWarp Jotai Adapter
 
 [日本語](README.ja.md)
 
-TurboWarp-HTTP-Server-Jotai is an experimental TurboWarp extension package for describing Jotai-facing state contracts with blocks. It does not embed Jotai in TurboWarp. Instead, it produces JSON for an atom registry, action envelopes, and state snapshots that a React/Jotai bridge can consume.
+TurboWarp Jotai Adapter is an experimental TurboWarp extension package for describing Jotai-facing state contracts with blocks. It does not embed Jotai in TurboWarp. Instead, it produces JSON for an atom registry, action envelopes, and state snapshots that a React/Jotai bridge can consume.
 
 ## What it does
 
@@ -14,7 +14,7 @@ TurboWarp-HTTP-Server-Jotai is an experimental TurboWarp extension package for d
 The package is version-pinned when used from another toolchain:
 
 ```bash
-pnpm add --save-exact @kubohiroya/turbowarp-http-server-jotai@0.1.0
+pnpm add --save-exact @kubohiroya/turbowarp-jotai-adapter@0.2.0
 ```
 
 ## Requirements and safety
