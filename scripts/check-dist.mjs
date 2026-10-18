@@ -8,7 +8,7 @@ const repositoryRoot = fileURLToPath(new URL('..', import.meta.url));
 try {
   await execFileAsync('git', ['rev-parse', '--verify', 'HEAD'], {cwd: repositoryRoot});
 } catch {
-  await execFileAsync('test', ['-f', 'dist/jotai-bridge.js'], {
+  await execFileAsync('test', ['-f', 'dist/turbowarp-jotai-adapter.js'], {
     cwd: repositoryRoot
   });
   await execFileAsync('test', ['-f', 'dist/extension-manifest.json'], {

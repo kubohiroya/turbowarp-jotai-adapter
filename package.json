@@ -37,7 +37,8 @@
     "./jotai-bridge": {
       "types": "./dist/jotai-bridge.d.ts",
       "import": "./dist/jotai-bridge.js"
-    }
+    },
+    "./dist/turbowarp-jotai-adapter.js": "./dist/turbowarp-jotai-adapter.js"
   },
   "publishConfig": {
     "access": "public",
@@ -74,5 +75,7 @@
   },
   "dependencies": {
     "@kubohiroya/turbowarp-extension-data-editor": "git+https://github.com/kubohiroya/turbowarp-extension-data-editor.git#76fa1d50a3c188082ceef723ea018a9d8769ea6e"
-  }
+  },
+  "unpkg": "./dist/turbowarp-jotai-adapter.js",
+  "jsdelivr": "./dist/turbowarp-jotai-adapter.js"
 }

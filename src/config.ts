@@ -1,6 +1,6 @@
 export const extensionConfig = {
   id: 'kubohiroyajotaiadapter',
-  slug: 'jotai-bridge',
+  slug: 'turbowarp-jotai-adapter',
   name: 'TurboWarp Jotai Adapter',
   description: 'TurboWarp blocks for producing Jotai bridge JSON.',
   author: 'Hiroya Kubo',

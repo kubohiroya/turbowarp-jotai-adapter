@@ -127,8 +127,8 @@ async function checkPackContents() {
   for (const file of policy.requiredFiles) {
     if (!files.has(file)) errors.push(`npm pack must include ${file}`);
   }
-  if (!files.has('dist/jotai-bridge.js')) {
-    errors.push('npm pack must include the generated extension bundle');
+  for (const entry of [`dist/${extractConfigValue('slug')}.js`, 'dist/jotai-bridge.js', 'dist/jotai-bridge.d.ts']) {
+    if (!files.has(entry)) errors.push(`npm pack must include ${entry}`);
   }
   await access('pnpm-lock.yaml');
 }
