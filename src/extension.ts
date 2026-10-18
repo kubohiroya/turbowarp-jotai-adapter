@@ -1,3 +1,5 @@
+import {sourceEditorDefinitions} from './editor-schema.js';
+import {registerSourceEditors} from './source-editor.js';
 import {extensionConfig} from './config';
 import definitions from './block-definitions.json';
 import {
@@ -32,6 +34,10 @@ interface BlockDefinition {
 const blockDefinitions = definitions.blocks as readonly BlockDefinition[];
 
 export class JotaiBridgeExtension implements TurboWarpExtension {
+  private readonly unregisterSourceEditors: () => void;
+  public constructor() {this.unregisterSourceEditors = registerSourceEditors(Scratch, sourceEditorDefinitions);}
+  public dispose(): void {this.unregisterSourceEditors();}
+
   private plan: AtomBridgePlan = createEmptyPlan();
 
   public getInfo(): Record<string, unknown> {
