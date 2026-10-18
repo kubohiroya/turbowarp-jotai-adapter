@@ -35,7 +35,7 @@ pnpm run build
 pnpm run test
 ```
 
-生成される `dist/jotai-bridge.js` をTurboWarpのcustom extensionとして読み込むと、Jotai bridge用JSONを作る最低限のブロックを利用できます。
+生成される `dist/turbowarp-jotai-adapter.js` をTurboWarpのcustom extensionとして読み込むと、Jotai bridge用JSONを作る最低限のブロックを利用できます。
 
 ## ブロック概要
 
@@ -89,3 +89,5 @@ Web側資料では、書籍の補足に留めず、次の内容を独立して�
 ## ライセンス
 
 SPDX-License-Identifier: MPL-2.0
+
+拡張用standaloneと既存library入口 `@kubohiroya/turbowarp-jotai-adapter/jotai-bridge` は別の配布物です。libraryの `dist/jotai-bridge.js` は互換性のため保持します。

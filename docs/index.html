@@ -23,6 +23,10 @@
   <h1>TurboWarp Jotai Adapter</h1>
   <p>This TurboWarp extension describes Jotai atom registry, action envelope, and state snapshot JSON. It is a bridge contract, not a bundled Jotai runtime.</p>
 
+  <h2>Load the extension</h2>
+  <p>Load <code>dist/turbowarp-jotai-adapter.js</code> as the TurboWarp custom extension. The existing <code>jotai-bridge</code> library entry remains separate.</p>
+  <p><a href="https://cdn.jsdelivr.net/npm/@kubohiroya/turbowarp-jotai-adapter@0.3.0/dist/turbowarp-jotai-adapter.js">jsDelivr standalone bundle</a> · <a href="https://unpkg.com/@kubohiroya/turbowarp-jotai-adapter@0.3.0/dist/turbowarp-jotai-adapter.js">unpkg standalone bundle</a></p>
+
   <h2>Intended role</h2>
   <p>Use blocks for declarative state descriptions, then pass the generated JSON to a React/Jotai host that validates and applies it with TypeScript hooks.</p>
 
