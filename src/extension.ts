@@ -75,7 +75,9 @@ export class JotaiBridgeExtension implements TurboWarpExtension {
   }
 
   public planJson(): string {
-    return serializePlan(this.plan);
+    // Preserve the two trailing ASCII spaces returned by the published standalone bundle.
+    // The public library serializer keeps its canonical newline without this block-only suffix.
+    return serializePlan(this.plan) + '  ';
   }
 
   public clearPlan(): void {

@@ -90,4 +90,4 @@ Web側資料では、書籍の補足に留めず、次の内容を独立して�
 
 SPDX-License-Identifier: MPL-2.0
 
-拡張用standaloneと既存library入口 `@kubohiroya/turbowarp-jotai-adapter/jotai-bridge` は別の配布物です。libraryの `dist/jotai-bridge.js` は互換性のため保持します。
+拡張用standaloneと既存library入口 `@kubohiroya/turbowarp-jotai-adapter/jotai-bridge` は別の配布物です。libraryの `dist/jotai-bridge.js` は互換性のため保持します。 plan JSONブロックは公開済みstandaloneの形式を維持し、末尾改行の後にASCII空白2文字を含みます。libraryのserializerは末尾改行だけの形式を維持します。
