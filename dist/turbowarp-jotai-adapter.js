@@ -8408,7 +8408,7 @@
   		return serializeJsonValue(createSetAtomAction(Scratch.Cast.toString(args.ATOM), this.parseBlockJson(args.VALUE)));
   	}
   	planJson() {
-  		return serializePlan(this.plan);
+  		return serializePlan(this.plan) + "  ";
   	}
   	clearPlan() {
   		this.plan = createEmptyPlan();

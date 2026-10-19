@@ -1,0 +1,29 @@
+{
+  "source": {
+    "package": "@kubohiroya/turbowarp-jotai-adapter",
+    "version": "0.3.0",
+    "tarball": "https://registry.npmjs.org/@kubohiroya/turbowarp-jotai-adapter/-/turbowarp-jotai-adapter-0.3.0.tgz",
+    "tarIntegrity": "sha512-thAXsC4DQKWp/KeUxwmQ/KEg7fmLc8kbAdnNdPC3HgFGJIY5nohjHw/M0LgZRFYMd3Y3K25XXFohvMP3cWi+3w==",
+    "standaloneSha256": "953ad5ecfa652111088298251a880319b34ddbada390adb19fc4204b76e3ee78",
+    "gitBaseSha": "d9bc81ddccb0eb24b5f5fc0f0c312d61d2e9d7db",
+    "provenance": "Values executed from the immutable published standalone artifact, independently matched to the selected Git base. Trailing ASCII spaces are intentional fixture data."
+  },
+  "states": [
+    {
+      "name": "initial-plan",
+      "value": "{\n  \"formatVersion\": 1,\n  \"registry\": {\n    \"atoms\": []\n  },\n  \"snapshot\": {\n    \"values\": {}\n  },\n  \"actions\": []\n}\n  "
+    },
+    {
+      "name": "define-counter",
+      "value": "{\n  \"formatVersion\": 1,\n  \"registry\": {\n    \"atoms\": [\n      {\n        \"id\": \"counter\",\n        \"label\": \"counter\",\n        \"defaultValue\": 0,\n        \"writable\": true,\n        \"tags\": []\n      }\n    ]\n  },\n  \"snapshot\": {\n    \"values\": {\n      \"counter\": 0\n    }\n  },\n  \"actions\": []\n}\n  "
+    },
+    {
+      "name": "plan",
+      "value": "{\n  \"formatVersion\": 1,\n  \"registry\": {\n    \"atoms\": [\n      {\n        \"id\": \"counter\",\n        \"label\": \"counter\",\n        \"defaultValue\": 0,\n        \"writable\": true,\n        \"tags\": []\n      }\n    ]\n  },\n  \"snapshot\": {\n    \"values\": {\n      \"counter\": 2\n    }\n  },\n  \"actions\": [\n    {\n      \"formatVersion\": 1,\n      \"kind\": \"jotai.setAtom\",\n      \"atomId\": \"counter\",\n      \"value\": 2\n    }\n  ]\n}\n  "
+    },
+    {
+      "name": "clear-plan",
+      "value": "{\n  \"formatVersion\": 1,\n  \"registry\": {\n    \"atoms\": []\n  },\n  \"snapshot\": {\n    \"values\": {}\n  },\n  \"actions\": []\n}\n  "
+    }
+  ]
+}

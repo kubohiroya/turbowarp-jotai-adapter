@@ -39,7 +39,7 @@ pnpm run build
 pnpm run test
 ```
 
-Load `dist/turbowarp-jotai-adapter.js` in TurboWarp as a custom extension. The library entry `@kubohiroya/turbowarp-jotai-adapter/jotai-bridge` remains separate and unchanged. The extension can define atoms, append set-atom action envelopes, and report the current bridge plan JSON.
+Load `dist/turbowarp-jotai-adapter.js` in TurboWarp as a custom extension. The library entry `@kubohiroya/turbowarp-jotai-adapter/jotai-bridge` remains separate and unchanged. The extension can define atoms, append set-atom action envelopes, and report the current bridge plan JSON. The plan JSON block preserves the published standalone format, including two trailing spaces after its final newline; the library serializer ends with the newline alone.
 
 ## Block reference
 
