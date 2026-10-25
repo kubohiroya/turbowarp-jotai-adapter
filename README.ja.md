@@ -1,5 +1,7 @@
 # TurboWarp Jotai Adapter
 
+<img src="assets/block-icon.svg" alt="" width="48" height="48">
+
 [English](README.md)
 
 TurboWarpのブロックから、Jotai連携用の状態定義JSONを作るための実験的・発展的パッケージです。Jotai本体をTurboWarp内で直接動かすのではなく、atom定義、action envelope、state snapshotをJSONとして表現し、React/Jotai側のbridgeへ渡すことをMVPにします。
