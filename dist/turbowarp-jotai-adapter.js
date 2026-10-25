@@ -7533,7 +7533,7 @@
   	exports.default = formatsPlugin;
   }));
   //#endregion
-  //#region node_modules/.pnpm/@kubohiroya+turbowarp-extension-data-editor@0.2.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@kubohiroya/turbowarp-extension-data-editor/dist/schema-json.js
+  //#region node_modules/.pnpm/@kubohiroya+turbowarp-extension-data-editor@0.3.3_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@kubohiroya/turbowarp-extension-data-editor/dist/schema-json.js
   var JsonSnapshotError = class extends Error {
   	constructor(kind, dataPath) {
   		super("JSON snapshot failed.");
@@ -7595,7 +7595,7 @@
   	return value !== null && typeof value === "object" && !Array.isArray(value);
   }
   //#endregion
-  //#region node_modules/.pnpm/@kubohiroya+turbowarp-extension-data-editor@0.2.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@kubohiroya/turbowarp-extension-data-editor/dist/schema-engine.js
+  //#region node_modules/.pnpm/@kubohiroya+turbowarp-extension-data-editor@0.3.3_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@kubohiroya/turbowarp-extension-data-editor/dist/schema-engine.js
   var import_ajv = require_ajv();
   var import__2020 = require__2020();
   var import_dist = /* @__PURE__ */ __toESM(require_dist(), 1);
@@ -7941,7 +7941,7 @@
   	}
   }
   //#endregion
-  //#region node_modules/.pnpm/@kubohiroya+turbowarp-extension-data-editor@0.2.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@kubohiroya/turbowarp-extension-data-editor/dist/schema-compose.js
+  //#region node_modules/.pnpm/@kubohiroya+turbowarp-extension-data-editor@0.3.3_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@kubohiroya/turbowarp-extension-data-editor/dist/schema-compose.js
   function deepFreeze(value) {
   	if (value !== null && typeof value === "object") {
   		Object.values(value).forEach(deepFreeze);
