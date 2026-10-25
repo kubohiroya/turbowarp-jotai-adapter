@@ -75,7 +75,7 @@
     "react-dom": "18.3.1"
   },
   "dependencies": {
-    "@kubohiroya/turbowarp-extension-data-editor": "^0.2.1"
+    "@kubohiroya/turbowarp-extension-data-editor": "^0.3.3"
   },
   "unpkg": "./dist/turbowarp-jotai-adapter.js",
   "jsdelivr": "./dist/turbowarp-jotai-adapter.js",
