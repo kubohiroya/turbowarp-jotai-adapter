@@ -1,4 +1,4 @@
-# TurboWarp-HTTP-Server-Jotai Architecture
+# TurboWarp Jotai Adapter Architecture
 
 This package provides TurboWarp blocks that describe a Jotai-facing state bridge. The MVP does not run Jotai inside TurboWarp. It produces JSON for an atom registry, action envelopes, and state snapshots so a React/Jotai host can validate and apply the state contract.
 

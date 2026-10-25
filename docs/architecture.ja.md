@@ -1,4 +1,4 @@
-# TurboWarp-HTTP-Server-Jotai アーキテクチャ
+# TurboWarp Jotai Adapter アーキテクチャ
 
 このパッケージは、TurboWarpブロックをJotaiの実行環境そのものにするのではなく、Jotai bridgeへ渡す状態契約を作るための拡張機能です。MVPでは「ブロックでJSONを作る」ことに集中します。
 

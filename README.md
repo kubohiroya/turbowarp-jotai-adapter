@@ -1,8 +1,10 @@
-# TurboWarp-HTTP-Server-Jotai
+# TurboWarp Jotai Adapter
+
+<img src="assets/block-icon.svg" alt="" width="48" height="48">
 
 [日本語](README.ja.md)
 
-TurboWarp-HTTP-Server-Jotai is an experimental TurboWarp extension package for describing Jotai-facing state contracts with blocks. It does not embed Jotai in TurboWarp. Instead, it produces JSON for an atom registry, action envelopes, and state snapshots that a React/Jotai bridge can consume.
+TurboWarp Jotai Adapter is an experimental TurboWarp extension package for describing Jotai-facing state contracts with blocks. It does not embed Jotai in TurboWarp. Instead, it produces JSON for an atom registry, action envelopes, and state snapshots that a React/Jotai bridge can consume.
 
 ## What it does
 
@@ -14,7 +16,7 @@ TurboWarp-HTTP-Server-Jotai is an experimental TurboWarp extension package for d
 The package is version-pinned when used from another toolchain:
 
 ```bash
-pnpm add --save-exact @kubohiroya/turbowarp-http-server-jotai@0.2.0
+pnpm add --save-exact @kubohiroya/turbowarp-jotai-adapter@0.3.1
 ```
 
 ## Requirements and safety
@@ -39,7 +41,7 @@ pnpm run build
 pnpm run test
 ```
 
-Load `dist/jotai-bridge.js` in TurboWarp as a custom extension. The extension can define atoms, append set-atom action envelopes, and report the current bridge plan JSON.
+Load `dist/turbowarp-jotai-adapter.js` in TurboWarp as a custom extension. The library entry `@kubohiroya/turbowarp-jotai-adapter/jotai-bridge` remains separate and unchanged. The extension can define atoms, append set-atom action envelopes, and report the current bridge plan JSON. The plan JSON block preserves the published standalone format, including two trailing spaces after its final newline; the library serializer ends with the newline alone.
 
 ## Block reference
 

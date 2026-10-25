@@ -77,7 +77,7 @@ process.stdout.write('Repository policy is aligned.\n');
 
 function checkPolicy() {
   if (policy.schemaVersion !== 1) errors.push('repo-policy.json schemaVersion must be 1');
-  if (policy.productName !== 'TurboWarp-HTTP-Server-Jotai') {
+  if (policy.productName !== 'TurboWarp Jotai Adapter') {
     errors.push('repo-policy.json productName must match README.md H1');
   }
   if (policy.licensePolicy !== 'mpl-2.0') {
@@ -106,10 +106,10 @@ function checkPackageMetadata() {
   if (packageMetadata.engines?.node !== '>=22.18.0') {
     errors.push('package.json engines.node must be >=22.18.0');
   }
-  if (packageMetadata.repository?.url !== 'git+https://github.com/kubohiroya/turbowarp-http-server-jotai.git') {
+  if (packageMetadata.repository?.url !== 'git+https://github.com/kubohiroya/turbowarp-jotai-adapter.git') {
     errors.push('package.json repository.url must point to the current repository');
   }
-  if (packageMetadata.bugs?.url !== 'https://github.com/kubohiroya/turbowarp-http-server-jotai/issues') {
+  if (packageMetadata.bugs?.url !== 'https://github.com/kubohiroya/turbowarp-jotai-adapter/issues') {
     errors.push('package.json bugs.url must point to the current issue tracker');
   }
   for (const file of policy.requiredFiles) {
@@ -148,7 +148,7 @@ function checkReadmes() {
     errors.push('README.md must include a version-pinned package example');
   }
   if (!readme.includes('MPL-2.0')) errors.push('README.md License section must include MPL-2.0');
-  if (!readmeJa.startsWith('# TurboWarp-HTTP-Server-Jotai\n')) {
+  if (!readmeJa.startsWith('# TurboWarp Jotai Adapter\n')) {
     errors.push('README.ja.md must mirror the product H1');
   }
 }
@@ -182,8 +182,8 @@ async function checkPackContents() {
   for (const file of policy.requiredFiles) {
     if (!files.has(file)) errors.push(`npm pack must include ${file}`);
   }
-  if (!files.has('dist/jotai-bridge.js')) {
-    errors.push('npm pack must include the generated extension bundle');
+  for (const entry of [`dist/${extractConfigValue('slug')}.js`, 'dist/jotai-bridge.js', 'dist/jotai-bridge.d.ts']) {
+    if (!files.has(entry)) errors.push(`npm pack must include ${entry}`);
   }
   await access('pnpm-lock.yaml');
 }

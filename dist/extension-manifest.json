@@ -1,6 +1,6 @@
 {
   "formatVersion": 1,
-  "id": "kubohiroyajotaibridge",
+  "id": "kubohiroyajotaiadapter",
   "blocks": [
     {
       "opcode": "atomValueJson",

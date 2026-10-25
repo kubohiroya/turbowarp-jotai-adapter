@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "productName": "TurboWarp-HTTP-Server-Jotai",
+  "productName": "TurboWarp Jotai Adapter",
   "packageType": "extension-package",
   "licensePolicy": "mpl-2.0",
   "readmeLanguages": ["en", "ja"],

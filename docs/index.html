@@ -3,25 +3,60 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>TurboWarp-HTTP-Server-Jotai documentation</title>
+  <title>TurboWarp Jotai Adapter documentation</title>
   <style>
-    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;max-width:900px;margin:0 auto;padding:2rem;line-height:1.6;color:#222}
-    code{background:#f3f3f3;padding:.1em .3em;border-radius:.25em}
-    pre{background:#f6f8fa;padding:1rem;overflow:auto;border-radius:.5rem}
+    :root{color-scheme:light dark;--fg:#222;--bg:#fff;--code-bg:#f3f3f3;--pre-bg:#f6f8fa}
+    @media (prefers-color-scheme:dark){:root{--fg:#e7eaf2;--bg:#12141a;--code-bg:#242833;--pre-bg:#1b1e26}}
+    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;max-width:900px;margin:0 auto;padding:2rem;line-height:1.6;color:var(--fg);background:var(--bg)}
+    code{background:var(--code-bg);padding:.1em .3em;border-radius:.25em}
+    pre{background:var(--pre-bg);padding:1rem;overflow:auto;border-radius:.5rem}
   </style>
+<style id="block-reference-style">
+#extension-block-reference{max-width:72rem;margin:2rem auto;padding:1rem;line-height:1.6;overflow-wrap:anywhere}
+#extension-block-reference .block-reference-entry{display:block;scroll-margin-top:6rem;margin:2rem 0;padding:1rem;border:1px solid currentColor;border-radius:.5rem}
+#extension-block-reference .block-reference-table{overflow-x:auto}
+#extension-block-reference table{border-collapse:collapse;width:100%}
+#extension-block-reference th,#extension-block-reference td{text-align:left;vertical-align:top;border:1px solid currentColor;padding:.5rem}
+#extension-block-reference code{white-space:pre-wrap}
+#extension-block-reference a:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+</style>
 </head>
-<body>
-  <h1>TurboWarp-HTTP-Server-Jotai</h1>
+<body><p lang="en" class="complete-block-reference-link"><a href="#extension-block-reference">Complete block reference (7 blocks)</a></p>
+  <h1>TurboWarp Jotai Adapter</h1>
   <p>This TurboWarp extension describes Jotai atom registry, action envelope, and state snapshot JSON. It is a bridge contract, not a bundled Jotai runtime.</p>
+
+  <h2>Load the extension</h2>
+  <p>Load <code>dist/turbowarp-jotai-adapter.js</code> as the TurboWarp custom extension. The existing <code>jotai-bridge</code> library entry remains separate.</p>
+  <p><a href="https://cdn.jsdelivr.net/npm/@kubohiroya/turbowarp-jotai-adapter@0.3.1/dist/turbowarp-jotai-adapter.js">jsDelivr standalone bundle</a> · <a href="https://unpkg.com/@kubohiroya/turbowarp-jotai-adapter@0.3.1/dist/turbowarp-jotai-adapter.js">unpkg standalone bundle</a></p>
 
   <h2>Intended role</h2>
   <p>Use blocks for declarative state descriptions, then pass the generated JSON to a React/Jotai host that validates and applies it with TypeScript hooks.</p>
 
   <h2>Documents</h2>
   <ul>
-    <li><a href="../README.md">README</a></li>
+    <li><a href="https://github.com/kubohiroya/turbowarp-jotai-adapter/blob/main/README.md">README</a></li>
     <li><a href="architecture.md">Architecture</a></li>
     <li><a href="architecture.ja.md">Architecture in Japanese</a></li>
   </ul>
+<!-- BEGIN COMPLETE BLOCK REFERENCE -->
+<section lang="en" id="extension-block-reference" aria-labelledby="block-reference-title">
+<h2 id="block-reference-title">TurboWarp Jotai Adapter: complete block reference</h2>
+<p>All 7 blocks are documented below, including compatibility blocks and blocks available through optional features. Select a block to read its behavior, arguments, default values, and menu choices. Each block has a permanent link.</p>
+<nav aria-label="Block reference"><ul><li><a href="#block-defineAtom"><code>define Jotai atom [ATOM] default JSON [VALUE]</code></a></li>
+<li><a href="#block-setAtomValue"><code>set Jotai atom [ATOM] JSON [VALUE]</code></a></li>
+<li><a href="#block-atomValueJson"><code>Jotai atom [ATOM] value JSON</code></a></li>
+<li><a href="#block-createSetActionJson"><code>Jotai set action atom [ATOM] JSON [VALUE]</code></a></li>
+<li><a href="#block-planJson"><code>Jotai bridge plan JSON</code></a></li>
+<li><a href="#block-clearPlan"><code>clear Jotai bridge plan</code></a></li>
+<li><a href="#block-normalizeValueJson"><code>normalized JSON [VALUE]</code></a></li>
+</ul></nav>
+<article id="block-defineAtom" class="block-reference-entry"><h3><code>define Jotai atom [ATOM] default JSON [VALUE]</code></h3><p>Adds or replaces an atom definition in the current bridge plan.</p><p>Block type: COMMAND. Opcode: <code>defineAtom</code>. <a href="#block-defineAtom">Permanent link</a></p><div class="block-reference-table"><table><thead><tr><th>Argument</th><th>Type</th><th>Default value</th><th>Menu choices</th></tr></thead><tbody><tr><th scope="row"><code>ATOM</code></th><td>STRING</td><td><code>counter</code></td><td></td></tr><tr><th scope="row"><code>VALUE</code></th><td>STRING</td><td><code>0</code></td><td></td></tr></tbody></table></div></article><article id="block-setAtomValue" class="block-reference-entry"><h3><code>set Jotai atom [ATOM] JSON [VALUE]</code></h3><p>Updates the current atom snapshot and appends a set-atom action envelope.</p><p>Block type: COMMAND. Opcode: <code>setAtomValue</code>. <a href="#block-setAtomValue">Permanent link</a></p><div class="block-reference-table"><table><thead><tr><th>Argument</th><th>Type</th><th>Default value</th><th>Menu choices</th></tr></thead><tbody><tr><th scope="row"><code>ATOM</code></th><td>STRING</td><td><code>counter</code></td><td></td></tr><tr><th scope="row"><code>VALUE</code></th><td>STRING</td><td><code>1</code></td><td></td></tr></tbody></table></div></article><article id="block-atomValueJson" class="block-reference-entry"><h3><code>Jotai atom [ATOM] value JSON</code></h3><p>Returns the current JSON value for an atom in the bridge plan.</p><p>Block type: REPORTER. Opcode: <code>atomValueJson</code>. <a href="#block-atomValueJson">Permanent link</a></p><div class="block-reference-table"><table><thead><tr><th>Argument</th><th>Type</th><th>Default value</th><th>Menu choices</th></tr></thead><tbody><tr><th scope="row"><code>ATOM</code></th><td>STRING</td><td><code>counter</code></td><td></td></tr></tbody></table></div></article><article id="block-createSetActionJson" class="block-reference-entry"><h3><code>Jotai set action atom [ATOM] JSON [VALUE]</code></h3><p>Returns a standalone set-atom action envelope as JSON.</p><p>Block type: REPORTER. Opcode: <code>createSetActionJson</code>. <a href="#block-createSetActionJson">Permanent link</a></p><div class="block-reference-table"><table><thead><tr><th>Argument</th><th>Type</th><th>Default value</th><th>Menu choices</th></tr></thead><tbody><tr><th scope="row"><code>ATOM</code></th><td>STRING</td><td><code>counter</code></td><td></td></tr><tr><th scope="row"><code>VALUE</code></th><td>STRING</td><td><code>1</code></td><td></td></tr></tbody></table></div></article><article id="block-planJson" class="block-reference-entry"><h3><code>Jotai bridge plan JSON</code></h3><p>Returns the current atom registry, action log, and state snapshot as bridge JSON.</p><p>Block type: REPORTER. Opcode: <code>planJson</code>. <a href="#block-planJson">Permanent link</a></p><p>This block has no arguments.</p></article><article id="block-clearPlan" class="block-reference-entry"><h3><code>clear Jotai bridge plan</code></h3><p>Clears the in-memory bridge plan held by this TurboWarp extension instance.</p><p>Block type: COMMAND. Opcode: <code>clearPlan</code>. <a href="#block-clearPlan">Permanent link</a></p><p>This block has no arguments.</p></article><article id="block-normalizeValueJson" class="block-reference-entry"><h3><code>normalized JSON [VALUE]</code></h3><p>Parses a JSON value and returns its canonical JSON representation.</p><p>Block type: REPORTER. Opcode: <code>normalizeValueJson</code>. <a href="#block-normalizeValueJson">Permanent link</a></p><div class="block-reference-table"><table><thead><tr><th>Argument</th><th>Type</th><th>Default value</th><th>Menu choices</th></tr></thead><tbody><tr><th scope="row"><code>VALUE</code></th><td>STRING</td><td><code>{&quot;label&quot;:&quot;demo&quot;}</code></td><td></td></tr></tbody></table></div></article>
+<p><a href="https://github.com/kubohiroya/turbowarp-jotai-adapter/blob/main/README.md">Repository guide and examples</a></p>
+</section>
+<!-- END COMPLETE BLOCK REFERENCE -->
+<!-- The shared TurboWarp Plus header. It inserts itself at the top of the
+     page in a shadow root, so it cannot disturb the styles below. -->
+<script type="module"
+        src="https://kubohiroya.github.io/turbowarp-plus-site-header/dist/auto.js"></script>
 </body>
 </html>

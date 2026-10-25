@@ -1,4 +1,6 @@
-# TurboWarp-HTTP-Server-Jotai
+# TurboWarp Jotai Adapter
+
+<img src="assets/block-icon.svg" alt="" width="48" height="48">
 
 [English](README.md)
 
@@ -35,7 +37,7 @@ pnpm run build
 pnpm run test
 ```
 
-生成される `dist/jotai-bridge.js` をTurboWarpのcustom extensionとして読み込むと、Jotai bridge用JSONを作る最低限のブロックを利用できます。
+生成される `dist/turbowarp-jotai-adapter.js` をTurboWarpのcustom extensionとして読み込むと、Jotai bridge用JSONを作る最低限のブロックを利用できます。
 
 ## ブロック概要
 
@@ -54,10 +56,10 @@ Reactコンポーネントのmount、MUIなどのリッチGUI部品、Vite dev�
 想定する分担は次の通りです。
 
 ```text
-TurboWarp-HTTP-Server-Jotai
+TurboWarp Jotai Adapter
   ブロックでatom registry/action/snapshotを作る
 
-TurboWarp-HTTP-Server-React
+TurboWarp React Islands
   ReactコンポーネントをHTMLへ埋め込み、bridge JSONをpropsやinitial stateとして渡す
 
 TypeScript hooks
@@ -89,3 +91,5 @@ Web側資料では、書籍の補足に留めず、次の内容を独立して�
 ## ライセンス
 
 SPDX-License-Identifier: MPL-2.0
+
+拡張用standaloneと既存library入口 `@kubohiroya/turbowarp-jotai-adapter/jotai-bridge` は別の配布物です。libraryの `dist/jotai-bridge.js` は互換性のため保持します。 plan JSONブロックは公開済みstandaloneの形式を維持し、末尾改行の後にASCII空白2文字を含みます。libraryのserializerは末尾改行だけの形式を維持します。
