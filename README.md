@@ -16,7 +16,7 @@ TurboWarp Jotai Adapter is an experimental TurboWarp extension package for descr
 The package is version-pinned when used from another toolchain:
 
 ```bash
-pnpm add --save-exact @kubohiroya/turbowarp-jotai-adapter@0.3.1
+pnpm add --save-exact @kubohiroya/turbowarp-jotai-adapter@0.4.0
 ```
 
 ## Requirements and safety
