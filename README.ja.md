@@ -17,7 +17,7 @@ TurboWarpのブロックから、Jotai連携用の状態定義JSONを作るた�
 
 ## 要件と安全性
 
-- Node.js 22以上
+- Node.js 24以上
 - Corepack経由のpnpm
 - TurboWarpのcustom extension読み込み
 
@@ -26,6 +26,7 @@ MVPではJSONの生成だけを扱います。実際のJotai storeへ反映す�
 ## インストール
 
 ```bash
+npm install --global corepack@latest
 corepack enable
 pnpm install --frozen-lockfile
 ```

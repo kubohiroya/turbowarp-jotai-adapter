@@ -21,7 +21,7 @@ pnpm add --save-exact @kubohiroya/turbowarp-jotai-adapter@0.4.0
 
 ## Requirements and safety
 
-- Node.js 22 or newer;
+- Node.js 24 or newer;
 - pnpm through Corepack;
 - TurboWarp custom extension loading.
 
@@ -30,6 +30,7 @@ The MVP only exchanges JSON. A host application must validate bridge JSON before
 ## Installation
 
 ```bash
+npm install --global corepack@latest
 corepack enable
 pnpm install --frozen-lockfile
 ```
