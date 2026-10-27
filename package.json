@@ -1,6 +1,6 @@
 {
   "name": "@kubohiroya/turbowarp-jotai-adapter",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "TurboWarp adapter blocks for describing Jotai atom registry, actions, and state bridge JSON.",
   "author": "Hiroya Kubo <hiroya@cuc.ac.jp>",
   "license": "MPL-2.0",
@@ -64,8 +64,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",
-    "@kubohiroya/turbowarp-extension-manifest": "^0.3.2",
-    "@kubohiroya/vite-plugin-turbowarp-extension": "^0.8.0",
+    "@kubohiroya/turbowarp-extension-manifest": "^0.4.0",
+    "@kubohiroya/vite-plugin-turbowarp-extension": "^0.9.0",
     "@types/node": "^24.13.3",
     "eslint": "^9.39.5",
     "typescript": "^5.9.3",
@@ -75,13 +75,13 @@
     "react-dom": "18.3.1"
   },
   "dependencies": {
-    "@kubohiroya/turbowarp-extension-data-editor": "^0.3.4"
+    "@kubohiroya/turbowarp-extension-data-editor": "^0.4.0"
   },
   "unpkg": "./dist/turbowarp-jotai-adapter.js",
   "jsdelivr": "./dist/turbowarp-jotai-adapter.js",
-  "gitHead": "050902887a108e24d2bf5398c11c37c8659f30eb",
+  "gitHead": "198ce00cd27633d61a17c87417adc0ddeb6e7fc8",
   "x-turbowarp-source": {
-    "revision": "050902887a108e24d2bf5398c11c37c8659f30eb",
+    "revision": "198ce00cd27633d61a17c87417adc0ddeb6e7fc8",
     "revisionRole": "base-commit",
     "sourceState": "local-release-overlay"
   }
