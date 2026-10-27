@@ -6,6 +6,18 @@ English | [日本語](README.ja.md)
 
 TurboWarp Jotai Adapter is an experimental TurboWarp extension package for describing Jotai-facing state contracts with blocks. It does not embed Jotai in TurboWarp. Instead, it produces JSON for an atom registry, action envelopes, and state snapshots that a React/Jotai bridge can consume.
 
+## Runnable sample
+
+[**Open the demo in TurboWarp Editor**](https://turbowarp.org/editor?project_url=https%3A%2F%2Fkubohiroya.github.io%2Fturbowarp-jotai-adapter%2Fsamples%2Fatom-value-and-plan.sb3) · [Download the SB3](https://kubohiroya.github.io/turbowarp-jotai-adapter/samples/atom-value-and-plan.sb3)
+
+Choose **Allow** and click the green flag.
+The counter value becomes 1; the plan includes sample-counter check is true.
+
+The full JSON is stored in **Bridge plan JSON**; enable that variable monitor to inspect it.
+
+Editable sources and expected results: [`samples/README.md`](samples/README.md).
+Run `pnpm run samples:build` after source/bundle changes and `pnpm run samples:check` before committing.
+
 ## What it does
 
 - defines a small block surface for atom definitions, set-atom actions, and snapshots;
