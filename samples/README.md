@@ -4,7 +4,7 @@
 - 起動: [TurboWarp Editor](https://turbowarp.org/editor?project_url=https%3A%2F%2Fkubohiroya.github.io%2Fturbowarp-jotai-adapter%2Fsamples%2Fatom-value-and-plan.sb3)
 - 操作: **Allow**で読み込みを許可し、緑の旗を押します。
 - 内容: `defineAtom`・`setAtomValue`・`atomValueJson`で値を変更し、`planJson`を表示
-- 期待結果: カウンター値が1になり、sample-counterを含むブリッジ計画が表示されます。
+- 期待結果: カウンター値が1になり、計画にsample-counterが含まれる確認がtrueになります。全文は変数Bridge plan JSONの表示を有効にして確認できます。
 
 `manifest.json`に拡張ID・JSパス・sandbox条件・期待結果を記録しています。
 `atom-value-and-plan/project.json`と自作SVGを編集し、次のコマンドで再生成します。

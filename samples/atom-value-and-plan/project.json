@@ -15,6 +15,10 @@
         "plan": [
           "Bridge plan JSON",
           ""
+        ],
+        "plan-visible": [
+          "Plan includes sample-counter?",
+          ""
         ]
       },
       "lists": {},
@@ -153,7 +157,7 @@
         "b8": {
           "opcode": "data_setvariableto",
           "parent": "b6",
-          "next": "b10",
+          "next": "b11",
           "inputs": {
             "VALUE": [
               3,
@@ -184,7 +188,7 @@
         },
         "b10": {
           "opcode": "data_setvariableto",
-          "parent": "b8",
+          "parent": "b11",
           "next": null,
           "inputs": {
             "VALUE": [
@@ -199,6 +203,64 @@
             "VARIABLE": [
               "Sample state",
               "sample-state"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b11": {
+          "opcode": "data_setvariableto",
+          "parent": "b8",
+          "next": "b10",
+          "inputs": {
+            "VALUE": [
+              2,
+              "b12"
+            ]
+          },
+          "fields": {
+            "VARIABLE": [
+              "Plan includes sample-counter?",
+              "plan-visible"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "b12": {
+          "opcode": "operator_contains",
+          "parent": "b11",
+          "next": null,
+          "inputs": {
+            "STRING1": [
+              3,
+              "b13",
+              [
+                10,
+                ""
+              ]
+            ],
+            "STRING2": [
+              1,
+              [
+                10,
+                "sample-counter"
+              ]
+            ]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "b13": {
+          "opcode": "data_variable",
+          "parent": "b12",
+          "next": null,
+          "inputs": {},
+          "fields": {
+            "VARIABLE": [
+              "Bridge plan JSON",
+              "plan"
             ]
           },
           "shadow": false,
@@ -247,11 +309,11 @@
       "isDiscrete": true
     },
     {
-      "id": "plan",
+      "id": "plan-visible",
       "mode": "default",
       "opcode": "data_variable",
       "params": {
-        "VARIABLE": "Bridge plan JSON"
+        "VARIABLE": "Plan includes sample-counter?"
       },
       "spriteName": null,
       "value": "",

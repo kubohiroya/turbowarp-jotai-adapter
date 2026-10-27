@@ -13,6 +13,8 @@ TurboWarpのブロックから、Jotai連携用の状態定義JSONを作るた�
 **Allow**で読み込みを許可し、緑の旗を押します。
 `defineAtom`・`setAtomValue`・`atomValueJson`で値を変更し、`planJson`を表示。サンプルの元データと期待結果は[`samples/README.md`](samples/README.md)に記載しています。
 
+画面の計画確認がtrueになります。全文は変数**Bridge plan JSON**に保持されるので、その変数の表示を有効にして確認できます。
+
 `pnpm run samples:build`でSB3を再生成し、`pnpm run samples:check`で更新漏れと生成処理を確認します。
 
 ## できること

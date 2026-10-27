@@ -17,6 +17,10 @@
         {
           "variable": "plan",
           "contains": "sample-counter"
+        },
+        {
+          "variable": "plan-visible",
+          "equals": true
         }
       ],
       "instructions": "The counter value becomes 1; its bridge plan is displayed."
