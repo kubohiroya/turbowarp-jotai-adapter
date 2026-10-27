@@ -6,6 +6,15 @@
 
 TurboWarpのブロックから、Jotai連携用の状態定義JSONを作るための実験的・発展的パッケージです。Jotai本体をTurboWarp内で直接動かすのではなく、atom定義、action envelope、state snapshotをJSONとして表現し、React/Jotai側のbridgeへ渡すことをMVPにします。
 
+## 実行できるサンプル
+
+[**TurboWarp Editorでデモを開く**](https://turbowarp.org/editor?project_url=https%3A%2F%2Fkubohiroya.github.io%2Fturbowarp-jotai-adapter%2Fsamples%2Fatom-value-and-plan.sb3) · [SB3をダウンロード](https://kubohiroya.github.io/turbowarp-jotai-adapter/samples/atom-value-and-plan.sb3)
+
+**Allow**で読み込みを許可し、緑の旗を押します。
+`defineAtom`・`setAtomValue`・`atomValueJson`で値を変更し、`planJson`を表示。サンプルの元データと期待結果は[`samples/README.md`](samples/README.md)に記載しています。
+
+`pnpm run samples:build`でSB3を再生成し、`pnpm run samples:check`で更新漏れと生成処理を確認します。
+
 ## できること
 
 - TurboWarpブロックでatom定義を作る。

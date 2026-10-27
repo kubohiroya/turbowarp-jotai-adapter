@@ -1,0 +1,25 @@
+{
+  "baseURL": "https://kubohiroya.github.io/turbowarp-jotai-adapter/",
+  "extension": {
+    "id": "kubohiroyajotaiadapter",
+    "bundle": "dist/turbowarp-jotai-adapter.js",
+    "unsandboxed": false
+  },
+  "samples": [
+    {
+      "name": "atom-value-and-plan",
+      "title": "Jotai Adapter minimal demo",
+      "checks": [
+        {
+          "variable": "value",
+          "equals": "1"
+        },
+        {
+          "variable": "plan",
+          "contains": "sample-counter"
+        }
+      ],
+      "instructions": "The counter value becomes 1; its bridge plan is displayed."
+    }
+  ]
+}
