@@ -7263,7 +7263,7 @@ var require__2020 = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 	});
 }));
 //#endregion
-//#region node_modules/.pnpm/ajv-formats@2.1.1_ajv@8.20.0/node_modules/ajv-formats/dist/formats.js
+//#region node_modules/.pnpm/ajv-formats@2.1.1/node_modules/ajv-formats/dist/formats.js
 var require_formats = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.formatNames = exports.fastFormats = exports.fullFormats = void 0;
@@ -7421,7 +7421,7 @@ var require_formats = /* @__PURE__ */ __commonJSMin(((exports) => {
 	}
 }));
 //#endregion
-//#region node_modules/.pnpm/ajv-formats@2.1.1_ajv@8.20.0/node_modules/ajv-formats/dist/limit.js
+//#region node_modules/.pnpm/ajv-formats@2.1.1/node_modules/ajv-formats/dist/limit.js
 var require_limit = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.formatLimitDefinition = void 0;
@@ -7499,7 +7499,7 @@ var require_limit = /* @__PURE__ */ __commonJSMin(((exports) => {
 	exports.default = formatLimitPlugin;
 }));
 //#endregion
-//#region node_modules/.pnpm/ajv-formats@2.1.1_ajv@8.20.0/node_modules/ajv-formats/dist/index.js
+//#region node_modules/.pnpm/ajv-formats@2.1.1/node_modules/ajv-formats/dist/index.js
 var require_dist = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	var formats_1 = require_formats();
@@ -8805,7 +8805,7 @@ var require_fast_uri = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 	module.exports.fastUri = fastUri;
 }));
 //#endregion
-//#region node_modules/.pnpm/@kubohiroya+turbowarp-extension-data-editor@0.3.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@kubohiroya/turbowarp-extension-data-editor/dist/schema-json.js
+//#region node_modules/.pnpm/@kubohiroya+turbowarp-extension-data-editor@0.4.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@kubohiroya/turbowarp-extension-data-editor/dist/schema-json.js
 var JsonSnapshotError = class extends Error {
 	constructor(kind, dataPath) {
 		super("JSON snapshot failed.");
@@ -8867,7 +8867,7 @@ function isJsonRecord(value) {
 	return value !== null && typeof value === "object" && !Array.isArray(value);
 }
 //#endregion
-//#region node_modules/.pnpm/@kubohiroya+turbowarp-extension-data-editor@0.3.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@kubohiroya/turbowarp-extension-data-editor/dist/schema-engine.js
+//#region node_modules/.pnpm/@kubohiroya+turbowarp-extension-data-editor@0.4.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@kubohiroya/turbowarp-extension-data-editor/dist/schema-engine.js
 var import_ajv = require_ajv();
 var import__2020 = require__2020();
 var import_dist = /* @__PURE__ */ __toESM(require_dist(), 1);
@@ -9213,7 +9213,7 @@ function compileSchemaBundle(input) {
 	}
 }
 //#endregion
-//#region node_modules/.pnpm/@kubohiroya+turbowarp-extension-data-editor@0.3.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@kubohiroya/turbowarp-extension-data-editor/dist/schema-compose.js
+//#region node_modules/.pnpm/@kubohiroya+turbowarp-extension-data-editor@0.4.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@kubohiroya/turbowarp-extension-data-editor/dist/schema-compose.js
 function deepFreeze(value) {
 	if (value !== null && typeof value === "object") {
 		Object.values(value).forEach(deepFreeze);
