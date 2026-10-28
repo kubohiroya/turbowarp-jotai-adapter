@@ -8805,7 +8805,7 @@ var require_fast_uri = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 	module.exports.fastUri = fastUri;
 }));
 //#endregion
-//#region node_modules/.pnpm/@kubohiroya+turbowarp-extension-data-editor@0.4.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@kubohiroya/turbowarp-extension-data-editor/dist/schema-json.js
+//#region node_modules/.pnpm/@kubohiroya+turbowarp-extension-data-editor@0.5.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@kubohiroya/turbowarp-extension-data-editor/dist/schema-json.js
 var JsonSnapshotError = class extends Error {
 	constructor(kind, dataPath) {
 		super("JSON snapshot failed.");
@@ -8867,7 +8867,7 @@ function isJsonRecord(value) {
 	return value !== null && typeof value === "object" && !Array.isArray(value);
 }
 //#endregion
-//#region node_modules/.pnpm/@kubohiroya+turbowarp-extension-data-editor@0.4.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@kubohiroya/turbowarp-extension-data-editor/dist/schema-engine.js
+//#region node_modules/.pnpm/@kubohiroya+turbowarp-extension-data-editor@0.5.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@kubohiroya/turbowarp-extension-data-editor/dist/schema-engine.js
 var import_ajv = require_ajv();
 var import__2020 = require__2020();
 var import_dist = /* @__PURE__ */ __toESM(require_dist(), 1);
@@ -9213,7 +9213,7 @@ function compileSchemaBundle(input) {
 	}
 }
 //#endregion
-//#region node_modules/.pnpm/@kubohiroya+turbowarp-extension-data-editor@0.4.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@kubohiroya/turbowarp-extension-data-editor/dist/schema-compose.js
+//#region node_modules/.pnpm/@kubohiroya+turbowarp-extension-data-editor@0.5.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@kubohiroya/turbowarp-extension-data-editor/dist/schema-compose.js
 function deepFreeze(value) {
 	if (value !== null && typeof value === "object") {
 		Object.values(value).forEach(deepFreeze);
