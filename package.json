@@ -1,6 +1,6 @@
 {
   "name": "@kubohiroya/turbowarp-jotai-adapter",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "TurboWarp adapter blocks for describing Jotai atom registry, actions, and state bridge JSON.",
   "author": {
     "name": "Hiroya Kubo",
@@ -72,7 +72,7 @@
   "devDependencies": {
     "@eslint/js": "^9.39.5",
     "@kubohiroya/turbowarp-extension-manifest": "^0.5.0",
-    "@kubohiroya/vite-plugin-turbowarp-extension": "^0.10.0",
+    "@kubohiroya/vite-plugin-turbowarp-extension": "^0.11.0",
     "@types/node": "^24.13.3",
     "eslint": "^9.39.5",
     "typescript": "^5.9.3",
@@ -82,7 +82,7 @@
     "react-dom": "18.3.1"
   },
   "dependencies": {
-    "@kubohiroya/turbowarp-extension-data-editor": "^0.5.0"
+    "@kubohiroya/turbowarp-extension-data-editor": "^0.8.1"
   },
   "unpkg": "./dist/turbowarp-jotai-adapter.js",
   "jsdelivr": "./dist/turbowarp-jotai-adapter.js",
