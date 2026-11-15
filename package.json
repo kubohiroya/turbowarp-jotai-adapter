@@ -1,6 +1,6 @@
 {
   "name": "@kubohiroya/turbowarp-jotai-adapter",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "TurboWarp adapter blocks for describing Jotai atom registry, actions, and state bridge JSON.",
   "author": {
     "name": "Hiroya Kubo",
