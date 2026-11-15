@@ -35,23 +35,47 @@ export function sourceBinding(argument: string, bundle: SchemaBundle,
   };
 }
 
-/** The optional capability keeps legacy hosts and the startup flag safely inactive. */
+/**
+ * The optional capability keeps legacy hosts and the startup flag safely inactive.
+ * Every project load disposes the runtime, which releases the registrations, but the extension
+ * stays loaded for the next project, so they are registered again once that project has loaded.
+ * Only the returned owner dispose is final.
+ */
 export function registerSourceEditors(scratch: unknown, definitions: readonly SourceEditorOptions[]): () => void {
   const host = scratch as {gui?: {blockEditors?: {apiVersion?: number; registerSourceEditor?: (options: SourceEditorOptions) => () => void}};
     vm?: {runtime?: {on?: (event: string, listener: () => void) => void; off?: (event: string, listener: () => void) => void}}};
   const api = host.gui?.blockEditors;
   if (api?.apiVersion !== 1 || typeof api.registerSourceEditor !== 'function') return () => {};
+  const runtime = host.vm?.runtime;
   const removers: (() => void)[] = [];
   let active = true;
+  let released = false;
+  const release = () => {for (const remove of removers.splice(0).reverse()) remove();};
+  const register = () => {
+    try {for (const definition of definitions) removers.push(api.registerSourceEditor!.call(api, definition));}
+    catch (error) {release(); throw error;}
+  };
+  const releaseForProjectLoad = () => {
+    if (!active || released) return;
+    released = true;
+    release();
+  };
+  const restoreAfterProjectLoad = () => {
+    if (!active || !released) return;
+    register();
+    released = false;
+  };
   const dispose = () => {
     if (!active) return;
     active = false;
-    host.vm?.runtime?.off?.('RUNTIME_DISPOSED', dispose);
-    for (const remove of removers.splice(0).reverse()) remove();
+    runtime?.off?.('RUNTIME_DISPOSED', releaseForProjectLoad);
+    runtime?.off?.('PROJECT_LOADED', restoreAfterProjectLoad);
+    release();
   };
   try {
-    for (const definition of definitions) removers.push(api.registerSourceEditor.call(api, definition));
-    host.vm?.runtime?.on?.('RUNTIME_DISPOSED', dispose);
+    register();
+    runtime?.on?.('RUNTIME_DISPOSED', releaseForProjectLoad);
+    runtime?.on?.('PROJECT_LOADED', restoreAfterProjectLoad);
   } catch (error) {dispose(); throw error;}
   return dispose;
 }

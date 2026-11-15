@@ -38,6 +38,34 @@ const binding = sourceEditorDefinitions[0]!.bindings[0]!;
   expect(removals).toBe(registrations);
   expect(listeners.size).toBe(0);
  });
+ it('registers again for each project the extension stays loaded for', () => {
+  // Every project load disposes the runtime, but the extension stays loaded for the next project.
+  const listeners = new Map<string, Set<() => void>>();
+  const emit = (event: string) => {for (const listener of [...listeners.get(event) ?? []]) listener();};
+  const removes: number[] = [];
+  let registrations = 0;
+  const scratch = {gui: {blockEditors: {apiVersion: 1, registerSourceEditor() {
+    const index = registrations++; removes[index] = 0; return () => {removes[index]!++;};
+   }}},
+   vm: {runtime: {
+    on(event: string, listener: () => void) {(listeners.get(event) ?? listeners.set(event, new Set()).get(event)!).add(listener);},
+    off(event: string, listener: () => void) {listeners.get(event)?.delete(listener);}
+   }}};
+  const count = sourceEditorDefinitions.length;
+  const dispose = registerSourceEditors(scratch, sourceEditorDefinitions);
+  emit('RUNTIME_DISPOSED');
+  expect(removes.reduce((sum, value) => sum + value, 0)).toBe(count);
+  emit('PROJECT_LOADED');
+  expect(registrations).toBe(count * 2);
+  emit('PROJECT_LOADED');
+  expect(registrations).toBe(count * 2);
+  expect(removes.slice(count)).toEqual(Array(count).fill(0));
+  dispose();
+  expect(removes).toEqual(Array(count * 2).fill(1));
+  emit('RUNTIME_DISPOSED'); emit('PROJECT_LOADED');
+  expect(registrations).toBe(count * 2);
+  expect([...listeners.values()].every(set => set.size === 0)).toBe(true);
+ });
 });
 
 describe('prepared source service integration', () => {
