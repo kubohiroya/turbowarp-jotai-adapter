@@ -28,7 +28,7 @@ Run `pnpm run samples:build` after source/bundle changes and `pnpm run samples:c
 The package is version-pinned when used from another toolchain:
 
 ```bash
-pnpm add --save-exact @kubohiroya/turbowarp-jotai-adapter@0.7.1
+pnpm add --save-exact @kubohiroya/turbowarp-jotai-adapter@0.8.0
 ```
 
 ## Requirements and safety
